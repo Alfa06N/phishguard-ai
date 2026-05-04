@@ -18,7 +18,7 @@ const { error } = storeToRefs(store);
     layout-id="results"
     v-bind="sVariants.fadeIn"
     :transition="sTransitions.spring.snappy"
-    class="w-full border border-red-900/50 bg-red-950/10 rounded-2xl p-12 flex flex-col items-center justify-center min-h-[300px]"
+    class="w-full mb-30 border border-red-900/50 bg-red-950/10 rounded-2xl p-12 flex flex-col items-center justify-center min-h-[300px]"
   >
     <!-- Icono de Error con Pulso Crítico -->
     <div class="relative mb-8">

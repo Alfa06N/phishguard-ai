@@ -5,7 +5,7 @@ import { motion } from "motion-v";
 const currentYear = new Date().getFullYear();
 
 const socialLinks = [
-  { title: "GitHub", url: "https://github.com/Alfa06N/resume-analyzer" },
+  { title: "GitHub", url: "https://github.com/Alfa06N/pishguard-ai" },
   {
     title: "LinkedIn",
     url: "https://www.linkedin.com/in/nicol%C3%A1s-alfaro-guzm%C3%A1n-7a9465270/",
@@ -32,10 +32,10 @@ const socialLinks = [
         class="space-y-3"
       >
         <h2 class="text-lg font-bold tracking-tight text-foreground">
-          Portfolio Resume AI
+          PhishGuard AI
         </h2>
         <p class="text-muted-foreground text-sm max-w-xs">
-          Built with precision to help engineers bypass modern ATS systems.
+          Built with precision to help anyone protect from phishing attacks.
         </p>
       </motion.div>
 

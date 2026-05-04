@@ -10,7 +10,7 @@ import { sTransitions } from "@/lib/smoothcn";
 
 const store = useScanner();
 const { performScan } = store;
-const { isScanning, inputValue } = storeToRefs(store);
+const { isScanning, inputValue, inputRef } = storeToRefs(store);
 const MAX_LENGTH = 3000;
 
 const charCount = computed(() => inputValue.value.length);
@@ -32,7 +32,7 @@ const isOverLimit = computed(() => charCount.value > MAX_LENGTH);
     <h1
       class="max-w-2-4xl bg-linear-to-b from-zinc-50 to-zinc-400 bg-clip-text text-5xl font-bold tracking-tight text-transparent sm:text-7xl"
     >
-      PishGuard AI
+      PhishGuard AI
     </h1>
 
     <p class="mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
@@ -43,6 +43,7 @@ const isOverLimit = computed(() => charCount.value > MAX_LENGTH);
 
     <div class="mt-10 w-full max-w-xl">
       <div
+        ref="inputRef"
         class="group relative rounded-xl border border-zinc-800 bg-zinc-900/40 p-2 transition-all duration-300 focus-within:border-zinc-400 focus-within:shadow-[0_0_30px_rgba(255,255,255,0.05),0_0_10px_rgba(255,255,255,0.05)]"
       >
         <Textarea

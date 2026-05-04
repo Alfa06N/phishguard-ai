@@ -29,7 +29,7 @@ watch(isScanning, async (newVal) => {
     layout-id="results"
     v-bind="sVariants.fadeIn"
     :transition="sTransitions.spring.snappy"
-    class="w-full border border-zinc-800 bg-zinc-900/40 rounded-2xl p-12 flex flex-col items-center justify-center min-h-[300px]"
+    class="w-full mb-30 border border-zinc-800 bg-zinc-900/40 rounded-2xl p-12 flex flex-col items-center justify-center min-h-[300px]"
   >
     <div class="relative mb-8" ref="resultsAnchor">
       <div

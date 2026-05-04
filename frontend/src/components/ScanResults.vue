@@ -83,7 +83,7 @@ const iconMap: Record<string, Component> = {
     v-bind="sVariants.fadeIn"
     :transition="sTransitions.spring.snappy"
     v-if="store.strategy"
-    class="mt-12 w-full px-4 max-w-5xl flex flex-col"
+    class="mt-12 mb-30 w-full px-4 max-w-5xl flex flex-col"
   >
     <!-- 1. Top Verdict Banner (The "Hero" of the results) -->
     <div

@@ -1,4 +1,4 @@
-import { computed, ref } from "vue";
+import { computed, ref, watch, nextTick } from "vue";
 import api from "@/api";
 import type { ScanResponse, ApiError, ScanStrategy } from "@/types";
 import { getScanStrategy } from "./useScanStrategy";
@@ -12,6 +12,7 @@ export const useScanner = defineStore("scanner", () => {
   const strategy = computed<null | ScanStrategy>(() =>
     results.value ? getScanStrategy(results.value) : null,
   );
+  const inputRef = ref<HTMLElement | null>();
 
   const performScan = async () => {
     const content = inputValue.value.trim();
@@ -42,14 +43,22 @@ export const useScanner = defineStore("scanner", () => {
     inputValue.value = "";
   };
 
+  const scrollToInput = async () => {
+    await nextTick();
+
+    inputRef.value?.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+
   return {
     isScanning,
     inputValue,
     results,
+    inputRef,
     error,
     strategy,
     performScan,
     resetValues,
     setInputValue,
+    scrollToInput,
   };
 });

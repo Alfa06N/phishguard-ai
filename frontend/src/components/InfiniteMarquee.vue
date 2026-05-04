@@ -98,7 +98,7 @@ const secondRow = examples.slice(7);
   <motion.div
     layout
     :transition="sTransitions.spring.snappy"
-    class="relative w-full py-12 overflow-hidden bg-transparent mt-40 group"
+    class="relative w-full py-12 overflow-hidden bg-transparent group"
   >
     <!-- Gradient Overlays para el efecto de "desaparecer" en los lados -->
     <div
