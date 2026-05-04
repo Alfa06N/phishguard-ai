@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { VButton } from "./smoothcn/vbutton";
 import { AlertCircle } from "lucide-vue-next";
 import { useScanner } from "@/composables/useScanner";
@@ -6,7 +6,7 @@ import { motion } from "motion-v";
 import { sVariants, sTransitions } from "@/lib/smoothcn";
 import { storeToRefs } from "pinia";
 const store = useScanner();
-const { resetValues, performScan } = store;
+const { performScan } = store;
 const { error } = storeToRefs(store);
 </script>
 

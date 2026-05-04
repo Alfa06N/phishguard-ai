@@ -1,4 +1,4 @@
-import { computed, ref, watch, nextTick } from "vue";
+import { computed, ref, nextTick } from "vue";
 import api from "@/api";
 import type { ScanResponse, ApiError, ScanStrategy } from "@/types";
 import { getScanStrategy } from "./useScanStrategy";
