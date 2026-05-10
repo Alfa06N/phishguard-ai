@@ -27,6 +27,7 @@ app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 origins = [
     "http://localhost:5173",
     "https://phishguard-ai-kappa.vercel.app",
+    "https://phishguard-ai-kappa.vercel.app/api/v1/scan",
     "https://phishguard-63p86kcnh-nicolas-alfaros-projects.vercel.app",
 ]
 app.add_middleware(
