@@ -24,11 +24,14 @@ app = FastAPI(title="Phishing Shield API")
 limiter = Limiter(key_func=get_remote_address)
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
-
+origins = [
+    "http://localhost:5173",
+    "https://phishguard-ai-kappa.vercel.app",
+    "https://phishguard-63p86kcnh-nicolas-alfaros-projects.vercel.app",
+]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173",
-                   "https://phishguard-ai-kappa.vercel.app/"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
