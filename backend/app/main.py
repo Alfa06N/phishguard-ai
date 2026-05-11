@@ -1,7 +1,6 @@
 import json
 import os
 import re
-from math import e
 from asyncio import sleep
 from app.schemas.ScanRequest import ScanRequest
 from app.schemas.ScanResponse import ScanResponse
@@ -9,10 +8,8 @@ from app.services.ai_service import analyze_with_gemini
 from app.services.vt_service import VTService
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Request, Response
-from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-from google.api_core import exceptions as google_exceptions
 from google.genai import errors as genai_errors
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
@@ -28,14 +25,13 @@ origins = [
     "http://localhost:5173",
     "https://phishguard-ai-kappa.vercel.app",
     "https://phishguard-63p86kcnh-nicolas-alfaros-projects.vercel.app",
-    "https://vercel.com/nicolas-alfaros-projects/phishguard-ai/FthCNQdtDaCWGBYLG2DbvSskFSDc"
 ]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_methods=["*"],
     allow_headers=["*"],
 )
 
