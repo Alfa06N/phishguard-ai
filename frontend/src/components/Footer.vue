@@ -5,7 +5,7 @@ import { motion } from "motion-v";
 const currentYear = new Date().getFullYear();
 
 const socialLinks = [
-  { title: "GitHub", url: "https://github.com/Alfa06N/pishguard-ai" },
+  { title: "GitHub", url: "https://github.com/Alfa06N/phishguard-ai" },
   {
     title: "LinkedIn",
     url: "https://www.linkedin.com/in/nicol%C3%A1s-alfaro-guzm%C3%A1n-7a9465270/",
