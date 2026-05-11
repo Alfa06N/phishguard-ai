@@ -31,7 +31,6 @@ origins = [
     "https://vercel.com/nicolas-alfaros-projects/phishguard-ai/FthCNQdtDaCWGBYLG2DbvSskFSDc"
 ]
 
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
